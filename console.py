@@ -37,7 +37,7 @@ def parse_arguments(arg):
         return retl
 
 
-class AirBnBCommand(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
     """
     Defines the command interpreter for AirBnB.
     """
