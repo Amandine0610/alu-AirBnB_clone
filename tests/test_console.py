@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines unittests for console.py.
+"""Defines unittests for console.py.
 
 Unittest classes:
     TestHBNBCommand_prompting
@@ -103,6 +103,7 @@ class TestHBNBCommand_help(unittest.TestCase):
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help"))
             self.assertEqual(h, output.getvalue().strip())
+
 
 class TestHBNBCommand_exit(unittest.TestCase):
     """Unittests for testing exiting from the HBNB command interpreter."""
