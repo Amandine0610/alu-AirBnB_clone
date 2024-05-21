@@ -6,7 +6,7 @@ Unit tests for the FileStorage class.
 
 import os
 import json
-import modelsi
+import models
 import unittest
 from datetime import datetime
 from models.engine.file_storage import FileStorage
