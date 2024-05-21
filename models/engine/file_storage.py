@@ -7,7 +7,8 @@ from datetime import datetime
 
 
 class FileStorage:
-    """A class that serializes instances to a JSON file and deserializes JSON file to instances."""
+    """A class that serializes instances to a JSON file and deserializes
+    JSON file to instances."""
 
     __file_path = "file.json"
     __objects = {}
@@ -24,7 +25,8 @@ class FileStorage:
     def save(self):
         """Serialize __objects to the JSON file."""
         with open(self.__file_path, 'w', encoding='utf-8') as file:
-            json.dump({key: obj.to_dict() for key, obj in self.__objects.items()}, file)
+            json.dump({key: obj.to_dict() for key, obj in self.__objects.items(
+                )}, file)
 
     def reload(self):
         """Deserialize the JSON file to __objects."""
@@ -98,4 +100,3 @@ class FileStorage:
                 "text": str
             }
         }
-
