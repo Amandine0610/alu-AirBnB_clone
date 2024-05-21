@@ -222,10 +222,6 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     obj.__dict__[k] = v
         storage.save()
-    def do_default(self, arg):
-        """Default behavior for cmd module when input is invalid"""
-        if len(arg) == 0:
-            return
 
 
 if __name__ == "__main__":
