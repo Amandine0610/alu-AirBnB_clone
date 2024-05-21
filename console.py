@@ -2,10 +2,10 @@
 """Module for the entry point of the command interpreter."""
 
 import cmd
-from models.base_model import BaseModel
 from models import storage
 import re
 import json
+
 
 class HBNBCommand(cmd.Cmd):
     """Class for the command interpreter."""
@@ -199,6 +199,7 @@ class HBNBCommand(cmd.Cmd):
                         pass  # fine, stay a string then
                 setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
